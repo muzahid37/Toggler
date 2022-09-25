@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post';
-import "./MainContant.css"
+import '../MainContent/MainContant.css'
+import HPost from './HPost';
+import './MainContant.css'
 
-const Posts = () => {
+const HorijontalPosts = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -11,20 +13,19 @@ const Posts = () => {
     }, []);
     return (
 
-         <div className=' posts-bg'>
-         
-         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-         {
-                    posts.map(post => <Post
+
+        <div className='hPosts'>
+            <div className="card w-9/12  shadow-xl">
+                {
+                    posts.map(post => <HPost
                         key={post.id}
                         post={post}
-                    ></Post>)
+                    ></HPost>)
                 }
-         </div>
-          </div>
-         
-      
+            </div>
+            {/* <Post></Post> */}
+        </div>
     );
 };
 
-export default Posts;
+export default HorijontalPosts;

@@ -1,0 +1,22 @@
+
+.sidebar ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-around;
+    border:1px solid 
+}
+.posts-bg{
+    padding: 21px;
+}
+.post-bg{
+    border-radius: 0px !important;
+   
+}
+.h-post{
+    justify-content: center;
+    height: 120px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
